@@ -1,0 +1,136 @@
+.member-title {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: Conthrax;
+}
+
+.member-title code {
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: Conthrax;
+    font-size: 15px;
+    margin-left: -23px;
+}
+
+.grid {
+    width: 1550px;
+	max-width: 100%;
+    display: grid;
+	margin: 0 auto;
+	counter-reset: boxes;
+    display: flex;
+    padding: 10px;
+    grid-gap: 25px;
+    justify-content: center;
+}
+
+.box {
+    position: relative;
+    color: rgba(255, 255, 255, .7);
+    font-size: 2rem;
+    font-family: sans-serif;
+    counter-increment: boxes;
+    display: flex;
+    justify-content: center;
+}
+
+.member {
+    color: black;
+    border: 5px solid white;
+}
+
+.tall {
+    width: 170px;
+    height: 260px;
+    border-radius: 20px;
+}
+
+.square {
+    width: 170px;
+    height: 152px;
+    border-radius: 20px;
+}
+
+.list-square {
+    width: 196px;
+    height: 160px;
+    border-radius: 20px;
+}
+
+.last-square {
+    width: 170px;
+    height: 150px;
+    border-radius: 20px;
+}
+
+.last-list-square {
+    width: 196px;
+    height: 150px;
+    border-radius: 20px;
+}
+
+.wide {
+    width: 424px;
+    height: 241px;
+    border-radius: 20px;
+}
+
+.profile-image img {
+    position: relative;
+    border-radius: 50%;
+    border: 3px solid white;
+    background-color: white;
+    width: 90px;
+    height: 90px;
+    margin-top: 30px;
+}
+
+.profile-image-small img {
+    border-radius: 50%;
+    border: 3px solid white;
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.member-name-tall p {
+    position: absolute;
+    color: white;
+    font-family: 'Conthrax';
+    font-size: 20px;
+    bottom: 0;
+    left: 0;
+    padding-left: 20px;
+}
+
+.member-name-square p {
+    position: absolute;
+    color: white;
+    font-family: 'Conthrax';
+    font-size: 15px;
+    bottom: 0;
+    left: 0;
+    padding-left: 20px;
+}
+
+@media screen and (max-width: 1110px) {
+    .grid {
+        width: calc(50% - 20px);
+	    max-width: 100%;
+        display: grid;
+	    margin: 0 auto;
+	    counter-reset: boxes;
+        display: flex;
+        padding: 10px;
+        grid-gap: 25px;
+        justify-content: center;
+    }
+
+    .box {
+        display: none;
+    }
+}

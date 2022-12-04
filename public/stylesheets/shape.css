@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@font-face {
+    font-family: Conthrax;
+    src: url(/font/ConthraxSb-Regular.woff2) format('woff')
+}
+
+:root {
+    --theme-bg-color: rgba(16, 18, 27, 0.4);
+    --border-color: rgba(113, 119, 144, 0.25);
+    --theme-color: #f9fafb;
+    --inactive-color: rgba(113, 119, 144, 0.78);
+    --body-font: "Poppins", sans-serif;
+    --hover-menu-bg: rgba(12, 15, 25, 0.3);
+    --content-title-color: #999ba5;
+    --content-bg: rgba(146, 151, 179, 0.13);
+    --button-inactive: rgba(249, 250, 251, 0.55);
+    --dropdown-bg: #21242d;
+    --dropdown-hover: #2a2e3c;
+    --popup-bg: #161925;
+    --search-bg: #14162b;
+    --overlay-bg: rgba(36, 39, 59, 0.3);
+    --scrollbar-bg: rgba(1, 2, 3, 0.4);
+}
+
+.light-mode {
+    --theme-bg-color: rgba(255, 255, 255, 0.31);
+    --theme-color: #3c3a3a;
+    --inactive-color: #333333;
+    --button-inactive: #3c3a3a;
+    --search-bg: rgba(255, 255, 255, 0.31);
+    --dropdown-bg: #f7f7f7;
+    --overlay-bg: rgba(255, 255, 255, 0.3);
+    --dropdown-hover: #ececec;
+    --border-color: rgba(255, 255, 255, 0.35);
+    --popup-bg: white;
+    --hover-menu-bg: rgba(255, 255, 255, 0.35);
+    --scrollbar-bg: rgba(255, 253, 253, 0.57);
+    --content-title-color: --theme-color;
+}
+
+.research-title {
+    color: white;
+    display: flex;
+    justify-content: center;
+    font-family: Conthrax;
+}
+
+img {
+  max-width: 100%;
+}
+
+.status-button {
+  font-size: 15px;
+  margin-top: 0;
+  padding: 6px 24px;
+}
+
+.apps-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-top: 3em;
+}
+
+.app-card {
+  display: flex;
+  flex-direction: column;
+  width: calc(33.3% - 20px);
+  font-size: 16px;
+  background-color: var(--content-bg);
+  border-radius: 14px;
+  border: 1px solid var(--theme-bg-color);
+  padding: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  color: white;
+  border: 1px solid;
+}
+
+.app-card-2 {
+    margin-top: 1.5em;
+}
+
+.app-card-3 {
+    margin-top: 1.5em;
+}
+
+.app-card:hover {
+  transform: scale(1.02);
+  background-color: var(--theme-bg-color);
+}
+
+.app-card svg {
+  width: 28px;
+  border-radius: 6px;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.app-card + .app-card {
+  margin-left: 50px;
+}
+
+.app-card span {
+  display: flex;
+  align-items: center;
+}
+
+.app-card__subtext {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.6em;
+  margin-top: 20px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 20px;
+}
+
+.app-card-buttons {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-top: 16px;
+}
+
+@media screen and (max-width: 1110px) {
+  .apps-card {
+    margin-top: -1em;
+  }
+  .app-card {
+    width: calc(50% - 20px);
+  }
+  .app-card-2 {
+    margin-top: 1em;
+  }
+  .app-card:last-child {
+    margin-top: 20px;
+    margin-left: 0px;
+  }
+  .research-title {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 565px) {
+  .app-card {
+    width: calc(100% - 90px);
+    margin-top: 20px;
+  }
+  .app-card-2 {
+    margin-top: 1em;
+  }
+  .app-card + .app-card {
+    margin-left: 0;
+  }
+}
+::-webkit-scrollbar {
+  width: 6px;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-bg);
+  border-radius: 10px;
+}
+
+.cs-2022 {
+  border-color: #6667AB!important;
+}
+
+.cs-2023 {
+  border-color: #903D49!important;
+}
+
+.cs2023-content-button {
+  background-color: #903D49;
+  border: none;
+  padding: 8px 26px;
+  color: #fff;
+  border-radius: 20px;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap;
+  font-family: 'Fira Code', monospace;
+}
+
+.cs2022-content-button {
+  background-color: #6667AB;
+  border: none;
+  padding: 8px 26px;
+  color: #fff;
+  border-radius: 20px;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap;
+  font-family: 'Fira Code', monospace;
+}
+
+.content-button {
+  background-color: #000000;
+  border: none;
+  padding: 8px 26px;
+  color: #fff;
+  border-radius: 20px;
+  margin-top: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+  white-space: nowrap;
+  font-family: 'Fira Code', monospace;
+}
