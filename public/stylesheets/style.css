@@ -41,7 +41,7 @@
 body {
 	margin: 0;
 	font-family: 'Fira Code', monospace;
-	background-image: url('/images/shape/background.png');
+	background-image: url('public/images/shape/background.png');
 	background-color: #000000;
 }
 
