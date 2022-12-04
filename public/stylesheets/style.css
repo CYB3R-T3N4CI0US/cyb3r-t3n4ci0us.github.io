@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@font-face {
+    font-family: Conthrax;
+    src: url(/font/ConthraxSb-Regular.woff2) format('woff')
+}
+
+:root {
+    --theme-bg-color: rgba(16, 18, 27, 0.4);
+    --border-color: rgba(113, 119, 144, 0.25);
+    --theme-color: #f9fafb;
+    --inactive-color: rgba(113, 119, 144, 0.78);
+    --body-font: "Poppins", sans-serif;
+    --hover-menu-bg: rgba(12, 15, 25, 0.3);
+    --content-title-color: #999ba5;
+    --content-bg: rgba(146, 151, 179, 0.13);
+    --button-inactive: rgba(249, 250, 251, 0.55);
+    --dropdown-bg: #21242d;
+    --dropdown-hover: #2a2e3c;
+    --popup-bg: #161925;
+    --search-bg: #14162b;
+    --overlay-bg: rgba(36, 39, 59, 0.3);
+    --scrollbar-bg: rgba(1, 2, 3, 0.4);
+}
+
+.light-mode {
+    --theme-bg-color: rgba(255, 255, 255, 0.31);
+    --theme-color: #3c3a3a;
+    --inactive-color: #333333;
+    --button-inactive: #3c3a3a;
+    --search-bg: rgba(255, 255, 255, 0.31);
+    --dropdown-bg: #f7f7f7;
+    --overlay-bg: rgba(255, 255, 255, 0.3);
+    --dropdown-hover: #ececec;
+    --border-color: rgba(255, 255, 255, 0.35);
+    --popup-bg: white;
+    --hover-menu-bg: rgba(255, 255, 255, 0.35);
+    --scrollbar-bg: rgba(255, 253, 253, 0.57);
+    --content-title-color: --theme-color;
+}
+
+body {
+	margin: 0;
+	font-family: 'Fira Code', monospace;
+	background-image: url('/images/shape/background.png');
+	background-color: #000000;
+}
+
+a {
+	text-decoration: none;
+	color: #707070;
+}
+
+a:hover {
+	color: white;
+}
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px 12px;
+}
+
+.navbar__logo {
+	font-size: 24px;
+	margin-left: 50px;
+	color: white;
+	font-family: Conthrax
+}
+
+.navbar__menu {
+	position: relative;
+	display: flex;
+	list-style: none;
+	padding-left: 0;
+}
+
+.navbar__menu li {
+	padding: 8px 25px;
+}
+
+.navbar__menu li:hover {
+	color: #ffffff;
+	border-radius: 4px;
+}
+
+.dropdown-1:hover .nav-dropdown-1 {
+	display: block;
+	justify-content: center;
+	position: absolute;
+	padding: 8px 0 30px;
+	text-align: left;
+	list-style: none;
+	margin-left: -24px;
+	background-color: black;
+}
+
+.dropdown-2:hover .nav-dropdown-2 {
+	display: block;
+	justify-content: center;
+	position: absolute;
+	padding: 8px 0 30px;
+	text-align: left;
+	list-style: none;
+	margin-left: -24px;
+	background-color:  black;
+}
+
+.navbar__sns {
+	list-style: none;
+	display: flex;
+	padding-left: 0;
+	margin-right: 50px;
+}
+
+.navbar__sns li {
+	padding: 8px 12px;
+}
+
+.nav-dropdown-1, .nav-dropdown-2 {
+    display: none;
+    z-index: 1;
+	border-color: var(--content-bg)
+}
+
+.navbar__toggleBtn {
+	display: none;
+	position: absolute;
+	right: 32px;
+	font-size: 24px;
+	color: white;
+}
+
+#banner {
+	justify-content: left;
+	margin: auto;
+}
+
+#banner-text {
+	padding: 80px 0;
+	margin: 0 60px;
+	color: white;
+	margin-top: 5em;
+	margin-left: 200px;
+}
+
+#banner-text h1 {
+	font-size: 72px;
+}
+
+#banner-text p {
+	margin-top: -30px;
+}
+
+.red-code {
+	color: #F45050;
+}
+
+.yellow-code {
+	color: #EBD989;
+}
+
+.green-code {
+	color: #40982B;
+}
+
+.blue-code {
+	color: #5595ED;
+}
+
+#banner-left {
+	width: 50%;
+	float: left;
+	box-sizing: border-box;
+}
+
+#banner-right {
+	width: 50%;
+	float: right;
+	box-sizing: border-box;
+}
+
+#banner-logo {
+	margin: 8em 0 0 4em;
+}
+
+#banner-logo img {
+	width: 90%;
+}
+
+/* Mobile Media query */
+@media screen and (max-width: 768px) {
+	.navbar {
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 8px 24px;
+	}
+	.navbar__logo {
+		margin-top: 10px;
+		font-size: 24px;
+		margin-left: -5px;
+		color: white;
+	}
+
+	.navbar__menu {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+		width: 100%;
+	}
+
+	.navbar__menu li {
+		width: 100%;
+		text-align: center;
+	}
+
+	.navbar__sns {
+		display: none;
+		justify-content: center;
+		width: 100%;
+	}
+
+	.navbar__toggleBtn {
+		margin-top: 10px;
+		display: block;
+	}
+
+	.navbar__menu.active,
+	.navbar__sns.active {
+		display: flex;
+	}
+	
+	#banner-text h1 {
+		display: none;
+	}
+
+	#banner-text p {
+		display: none;
+	}
+
+	#banner-logo img {
+		display: none;
+	}
+}
+
+/* Contact CSS */
+.content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.typedtext {
+    margin-top: 20%;
+    border-right: 2px solid white;
+    animation: blinkTextCursor 800ms steps(44) infinite normal;
+    height: 40px;
+    margin-bottom: 55px;
+    color: white;
+    display: block;
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: white;
+    }
+    to {
+        border-right-color: transparent;
+    }
+}
