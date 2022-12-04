@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
 @font-face {
     font-family: Conthrax;
-    src: url(/font/ConthraxSb-Regular.woff2) format('woff')
+    src: url(../font/ConthraxSb-Regular.woff2) format('woff')
 }
 
 :root {
